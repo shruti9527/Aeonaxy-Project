@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dribbble - Verify Email</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+    }
+    
+    nav {
+      background-color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333333;
+      margin-right: 20px;
+    }
+
+    nav a:last-child {
+      margin-right: 0;
+    }
+
+    nav img {
+      height: 30px;
+    }
+
+    nav .upload-btn {
+      background-color: #ea4b8b;
+      color: #ffffff;
+      padding: 8px 16px;
+      border-radius: 4px;
+    }
+    .container {
+     
+      background-color: #ffffff;
+      
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333333;
+      margin-bottom: 20px;
+    }
+
+    .email-icon {
+      font-size: 64px;
+      color: #ea4b8b;
+      margin-bottom: 20px;
+    }
+
+    .email-address {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .instructions {
+      margin-bottom: 20px;
+    }
+
+    .footer {
+      margin-top: 20px;
+      color: #666666;
+      font-size: 14px;
+    }
+    .column {
+      float: left;
+      width: 15.67%;
+      display: inline-blocks;
+      font-size: 10px;
+      
+    }
+    .container-1{
+      
+    padding-left: 50px;
+      padding-top: 50px;
+         } 
+
+    .avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px dashed #cccccc;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto -20px;
+      cursor: pointer;
+      display: inline-block;
+  }
+
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    nav a {
+      margin: 5px 0;
+    }
+
+    nav img {
+      margin-bottom: 10px;
+    }
+
+    .container-1 {
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 20px;
+    }
+
+    .column {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+   </style>
+</head>
+<nav>
+  <img src="logo.jpg" alt="Logo">
+  <div>
+    <a href="#">Inspiration</a>
+    <a href="#">Find Work</a>
+    <a href="#">Learn Design</a>
+    <a href="#">Go Pro</a>
+    <a href="#">Hire Designers</a>
+  </div>
+  <div>
+    <div class="avatar" onclick="chooseImage()">
+      <i class="fas fa-plus"></i></div>
+    <a href="#" class="upload-btn">Upload</a>
+  
+</nav>
+  <div class="container">
+    <h1>Please verify your email...</h1>
+    <div class="email-icon">&#9993;</div>
+    <p class="email-address">account@refero.design</p>
+    <p class="instructions">Click the confirmation link in that email to begin using Dribbble.</p>
+    <p>Didn't receive the email? Check your Spam folder, it may have been caught by a filter. If you still don't see it, you can <a href="#" onclick="resendConfirmation()">resend the confirmation email</a>.</p>
+    <p>Wrong email address? <a href="#" onclick="changeEmail()">Change it</a>.</p></div>
+    
+    <div class="container-1" >
+      <div class="column">
+        Dribbble is the world's leading community for creatives to share, grow, and get hired.
+        &copy; 2023 Dribbble. All rights reserved.
+      </div>
+      <div class="column">
+       <b>For Designers</b>
+       <p>Go Pro!</p><p>Explore design work</p><p>Design blog</p><p>Overtime podcast</p><p>Playoffs</p><p>Weekly Warm-up</p><p>Refer a Friend</p>Code of conduct
+      </div>
+      <div class="column">
+        <b>Hire designers</b>
+        <p>Post a job opening</p><p>Post a freelance project</p><p>Search for designers</p><br><p><b>Brands</b></p><p>Advertise with us</p>
+      </div>
+      <div class="column">
+        <b>Company</b>
+        <p>About</p><p>Careers</p><p>Support</p><p>Media kit</p><p>Testimonials</p><p>API</p><p>Term of service</p><p>Privacy policy</p><p>Cookie policy</p>
+      </div>
+      <div class="column">
+         <b>Directories</b>
+         <p>Design jobs</p><p>Designers for hire</p><p>Freelance designers<br> for hire</p><p>Tags</p><p>Places</p><br><p><b>Design assets</b></p><p>Dribble Marketplace</p><p>Creative Market</p><p>Fontspring</p><p>Font Squirrel</p>
+      </div>
+      <div class="column">
+        <b>Design Resources</b>
+        <p>Freelancing</p><p>Design Hiring</p><p>Design Portfolio</p><p>Design Education</p><p>Creative Process</p><p>Design Industry <br>Trends</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function resendConfirmation() {
+      // Add your logic for resending the confirmation email here
+      console.log("Resend confirmation email");
+    }
+
+    function changeEmail() {
+      // Add your logic for changing the email address here
+      console.log("Change email address");
+    }
+  </script>
+</body>
+</html>

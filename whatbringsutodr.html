@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dribbble</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+    }
+
+    .container {
+    
+     
+      background-color: #ffffff;
+     
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333333;
+      margin-bottom: 20px;
+    }
+
+    .options {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .option {
+      width: 250px;
+      padding: 20px;
+      margin: 10px;
+      background-color: #ffffff;
+      border-radius: 4px;
+     
+      cursor: pointer;
+      transition: border-color 0.3s ease;
+    }
+
+    .option.selected img {
+      border-color: #ea4b8b;
+    }
+
+    .option img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5.5%;
+            border: 2px solid transparent;
+    }
+
+    .option p {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    button {
+      background-color: #ea4b8b;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    @media (max-width: 768px) {
+      .option {
+        width: 100%; /* Set options to occupy full width on smaller screens */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="eleft">
+    <img src="logo1.jpeg"
+</div>
+  <div class="container">
+    <h1>What brings you to Dribbble?</h1>
+    <p>Select the options that best describe you. Don't worry, you can explore other options later.</p>
+
+    <div class="options">
+      <div class="option" onclick="toggleOption(this)">
+        <img src="img1.jpeg" alt="Designer Share">
+        
+      </div>
+      <div class="option" onclick="toggleOption(this)">
+        <img src="img2.jpeg" alt="Hire Designer">
+        
+      </div>
+      <div class="option" onclick="toggleOption(this)">
+        <img src="img3.jpeg" alt="Design Inspiration">
+        
+      </div>
+    </div>
+
+    <button>Finish</button>
+  </div>
+
+  <script>
+    function toggleOption(option) {
+      option.classList.toggle('selected');
+    }
+  </script>
+</body>
+</html>

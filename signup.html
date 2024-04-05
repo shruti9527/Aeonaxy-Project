@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dribble-Signup</title>
+    <style>
+        .left {
+            width: 40%;
+            float: left;}
+            .right {
+                width: 60%;
+                float: left;}
+
+                .form-container {
+                    background-color: #ffffff;
+                    
+                    border-radius: 0.5rem;
+                  
+                    
+                    width: 100%;
+                    position: relative;
+                  }
+
+                .form-group {
+                    margin-bottom: 1rem;
+                  }
+              
+                  label {
+                    display: block;
+                    font-weight: bold;
+                    margin-bottom: 0.5rem;
+                  }
+              
+                  
+                  input[type="text"],
+                  input[type="email"],
+                  input[type="password"] {
+                    width: 30%;
+                    padding: 0.5rem;
+                    border: none;
+                    border-radius: 10px;
+                   background-color: #f3ebee;
+                 
+                  }
+
+              
+                  input.error {
+                    border-color: #ff0000;
+                  }
+              
+                  .error-message {
+                    color: #ff0000;
+                    margin-bottom: 0.5rem;
+                  }
+              
+                  button[type="submit"] {
+                    background-color: #ea4b8b;
+                    color: #ffffff;
+                    border: none;
+                    padding: 0.5rem 1rem;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    width: 30%;
+                  }
+              
+                  button[type="submit"]:hover {
+                    background-color: #ea4b8b;
+                    
+                  }
+                  .image{
+                    width: 90%;
+                    height: 100%;
+                  }
+                  .form-group .inline{
+                    
+      align-items: flex-start;
+                  }
+                  .eright{
+                    float: right;
+                  }
+                  @media (max-width: 768px) {
+                    .left, .right {
+                        width: 100%;
+                    }
+                }
+    </style>
+</head>
+<div>
+  <div class="eright">
+    <p>Already a member?<a href="#">Sign in</a></p>
+  </div>
+    <div class = "left">
+        <img class="image" src = "13824c.jpg">
+    </div>
+    <div class = "right">
+        <div class = "form-container">
+            <form id="signup-form">
+                <div class="form-group">
+                    <h1>Sign up to Dribble</h1>
+                    <p class="error-message">Username has already been taken</p>
+                </div>
+                <div class="form-group inline">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" value="John">
+                </div>
+                <div class="form-group inline ">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" value="John" class="error">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" value="account@refero.design">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="6+ characters">
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="terms">
+                    <label for="terms" style="display: contents;">Creating an account means you're okay with our Terms of <br>Service,
+                         Privacy Policy, and our default Notification<br> Settings.</label>
+                </div>
+                <button type="submit">Create Account</button>
+            </form>
+          <p>This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</p>
+          <p>Art by Peter Tarka</p>
+        </div>
+        <div>
+          <p>Navigate to other pages</p>
+         <a href="profile.html">Profile Creation page </a><br>
+         <a href="whatbringsutodr.html">What brings us to Dribble </a><br>
+         <a href="email.html">Email page </a>
+        </div>
+      </div>
+      </div>
+     
+      <script>
+        const form = document.getElementById('signup-form');
+    
+        form.addEventListener('submit', (event) => {
+          event.preventDefault();
+          // Add your form submission logic here
+          console.log('Form submitted');
+        });
+    </script>
+</body>
+</html>

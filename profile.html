@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dribble-Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            width: 100%;
+        }
+        
+      
+        
+        .container {
+         
+            
+            background-color: #ffffff;
+            border-radius: 4px;
+            text-align: center;
+            box-sizing: border-box; /* Added to include padding and border in width */
+        }
+  
+        h1 {
+            color: #333333;
+            margin-bottom: 20px;
+        }
+  
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 2px dashed #cccccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 20px;
+            cursor: pointer;
+           
+            float: initial;
+        }
+  
+        .avatar i {
+            font-size: 30px;
+            color: #cccccc;
+          
+            
+        }
+  
+        input[type="text"] {
+            width: 50%;
+            padding: 10px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid #cccccc;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+  
+        button {
+            background-color: #ea4b8b;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+.choose{
+    width: auto;
+    display: inline-blocks;
+    
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* Reduced padding for smaller screens */
+    }
+}
+    </style>
+</head>
+<body>
+<div class="eleft">
+    <img src="logo1.jpeg"
+</div>
+        
+            <div class="container">
+              <b><h1>Welcome! Let's create your profile</h1></b>
+              <p>Let others get to know you better! You can do these later</p>
+          
+              <h2>Add an avatar</h2>
+              <div class="avatar" onclick="chooseImage()">
+                <i class="fas fa-plus"></i>
+              </div>
+              <div class = "choose">
+              <p>Choose image</p>
+              <p>Or choose one of our defaults</p></div>
+          
+              <h2>Add your location</h2>
+              <input type="text" placeholder="Enter a location"><br>
+          
+              <button>Next</button>
+            </div>
+          
+            <script>
+                function chooseImage() {
+                    // Create a hidden file input element
+                    var input = document.createElement('input');
+                    input.type = 'file';
+                    input.accept = 'image/*'; // Allow only image files
+                    input.style.display = 'none';
+            
+                    // Append the input element to the body
+                    document.body.appendChild(input);
+            
+                    // Trigger a click event on the input element
+                    input.click();
+            
+                    // Listen for changes in the input element
+                    input.addEventListener('change', function () {
+                        // Handle the selected file here
+                        var file = input.files[0];
+                        console.log("Selected file:", file);
+            
+                        // Remove the input element from the body
+                        document.body.removeChild(input);
+                    });
+                }
+            </script>
+            
+    </div>
+</body>
+</html>
