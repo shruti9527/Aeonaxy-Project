@@ -79,6 +79,10 @@
                   .eright{
                     float: right;
                   }
+                  .column{
+                    float: left;
+                    width: 50%;
+                  }
                   @media (max-width: 768px) {
                     .left, .right {
                         width: 100%;
@@ -98,16 +102,21 @@
             <form id="signup-form">
                 <div class="form-group">
                     <h1>Sign up to Dribble</h1>
-                    <p class="error-message">Username has already been taken</p>
+                    <p class="error-message"></p>
                 </div>
+
+                <div class="row">
+                  <div class="column">
                 <div class="form-group inline">
                     <label for="name">Name</label>
                     <input type="text" id="name" value="John">
-                </div>
+                </div></div>
+                <div class="column">
                 <div class="form-group inline ">
                     <label for="username">Username</label>
                     <input type="text" id="username" value="John" class="error">
-                </div>
+                </div></div></div>
+
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" value="account@refero.design">
@@ -136,13 +145,34 @@
       </div>
      
       <script>
+  
         const form = document.getElementById('signup-form');
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+    
+            // Get values of name and username fields
+            const name = document.getElementById('name').value;
+            const username = document.getElementById('username').value;
+    
+            // Check if name and username are the same
+            if (name.trim().toLowerCase() === username.trim().toLowerCase()) {
+                // Display error message
+                const errorMessage = document.querySelector('.error-message');
+                errorMessage.textContent = '*Username has already been taken';
+                return; // Stop form submission
+            }
+    
+            // If name and username are different, proceed with form submission
+            console.log('Form submitted');
+        });
+    </script>
+</body>
+</html>
+      <!-- const form = document.getElementById('signup-form');
     
         form.addEventListener('submit', (event) => {
           event.preventDefault();
           // Add your form submission logic here
           console.log('Form submitted');
-        });
-    </script>
-</body>
-</html>
+        }); -->
